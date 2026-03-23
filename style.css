@@ -1,0 +1,131 @@
+/* --- Global Reset & Body --- */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden; /* Stops scrolling to keep it like an app */
+}
+
+/* --- Background Videos --- */
+.bg-video {
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  object-fit: cover; 
+  z-index: -1;
+  opacity: 0.6; /* Darkens the video slightly so text pops */
+}
+
+/* --- Screen Transitions --- */
+.screen {
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease;
+}
+
+.hidden {
+  opacity: 0; 
+  pointer-events: none; /* Prevents clicking buttons on hidden pages */
+  transform: scale(0.95); /* Slight zoom-out effect when fading away */
+}
+
+.active {
+  opacity: 1; 
+  pointer-events: all; 
+  transform: scale(1);
+}
+
+/* --- Content Boxes & Text --- */
+.content {
+  z-index: 10; 
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark box */
+  padding: 40px; 
+  border-radius: 20px;
+  backdrop-filter: blur(8px); /* Blurs the background directly behind the text */
+  max-width: 600px;
+  width: 90%;
+}
+
+.glow-text {
+  font-size: 2.2rem; 
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #a200ff; /* Purple/White glow */
+}
+
+.poetic-text {
+  font-size: 1.2rem; 
+  margin-bottom: 30px; 
+  line-height: 1.6;
+}
+
+.vow-text {
+  font-size: 1.4rem; 
+  font-weight: bold; 
+  text-shadow: 0 0 8px rgba(255, 153, 204, 0.8);
+}
+
+/* --- Floating Image Animation --- */
+.floating-img {
+  width: 250px; 
+  height: auto;
+  border-radius: 15px; 
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* --- Delayed "Spawn" Buttons --- */
+.spawn-btn {
+  background: rgba(255, 255, 255, 0.1); 
+  color: white;
+  border: 2px solid white; 
+  padding: 15px 30px;
+  font-size: 1.2rem; 
+  border-radius: 30px;
+  cursor: pointer; 
+  backdrop-filter: blur(10px);
+  
+  /* Starts invisible, fades in after 3 seconds */
+  opacity: 0; 
+  animation: fadeInButton 1s ease 3s forwards; 
+}
+
+.spawn-btn:hover {
+  background: white; 
+  color: black;
+  transform: scale(1.05); 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.final-btn {
+  background: rgba(162, 0, 255, 0.3); 
+  border-color: #ff99cc;
+}
+
+@keyframes fadeInButton {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
