@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《在亿万世界中，我只遇见你》</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="bgMusic" loop>
+    <source src="assets/romantic-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <section id="screen-1" class="screen active">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/spawn.mp4" type="video/mp4"></video>
+    <div class="content">
+      <h1 class="glow-text">《在亿万世界中，我只遇见你》</h1>
+      <p class="poetic-text">Among billions of worlds, I only found you.</p>
+      <button onclick="startJourney(1, 2)" class="spawn-btn">进入我们的世界 → Enter our world</button>
+    </div>
+  </section>
+
+  <section id="screen-2" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/flowers.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo1.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">初绽 (The First Bloom)</h2>
+      <p class="poetic-text">Like a rare flower in a boundless field, your smile brought color to my world. Even from so far away, your warmth always reaches me.</p>
+      <button onclick="nextScreen(2, 3)" class="spawn-btn">下一步靠近你 → Step closer to you</button>
+    </div>
+  </section>
+
+  <section id="screen-3" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/flowers.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo2.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">微风 (Gentle Breeze)</h2>
+      <p class="poetic-text">Every time I see your face, Jingxuan, it feels like a gentle spring breeze. You are the peace I never knew I was searching for.</p>
+      <button onclick="nextScreen(3, 4)" class="spawn-btn">继续走向你 → Continue toward you</button>
+    </div>
+  </section>
+
+  <section id="screen-4" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/flowers.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo3.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">繁花 (Blossoming)</h2>
+      <p class="poetic-text">They say distance makes the heart grow fonder, but my heart just grows more certain that you are the one I want to walk beside.</p>
+      <button onclick="nextScreen(4, 5)" class="spawn-btn">走近你的温柔 → Walk into your tenderness</button>
+    </div>
+  </section>
+
+  <section id="screen-5" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/flowers.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo4.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">阳光小路 (Sunlit Path)</h2>
+      <p class="poetic-text">If I could plant a garden for every time I thought of you today, I would walk in my garden forever.</p>
+      <button onclick="nextScreen(5, 6)" class="spawn-btn">跟着光芒 → Follow the light</button>
+    </div>
+  </section>
+
+  <section id="screen-6" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/ocean.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo5.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">深海 (Deep Waters)</h2>
+      <p class="poetic-text">The oceans between us might seem vast, but my feelings for you run deeper than any tide.</p>
+      <button onclick="nextScreen(6, 7)" class="spawn-btn">潜入你的心海 → Dive into your heart's sea</button>
+    </div>
+  </section>
+
+  <section id="screen-7" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/ocean.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo6.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">思念的潮水 (Tides of Longing)</h2>
+      <p class="poetic-text">Like the ocean is pulled by the moon, I am endlessly drawn to you. Every wave that crashes feels like it's whispering your name.</p>
+      <button onclick="nextScreen(7, 8)" class="spawn-btn">随波逐流 → Drift with the waves</button>
+    </div>
+  </section>
+
+  <section id="screen-8" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/ocean.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo7.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">清澈的倒影 (Clear Reflection)</h2>
+      <p class="poetic-text">When I look into your eyes, the whole world fades away. I see a beautiful future where there is no distance, only us.</p>
+      <button onclick="nextScreen(8, 9)" class="spawn-btn">浮出水面 → Surface for breath</button>
+    </div>
+  </section>
+
+  <section id="screen-9" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/mountains.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo8.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">坚如磐石 (Unshakable)</h2>
+      <p class="poetic-text">You are my strength. Just looking at your smile gives me the courage to climb any mountain and face any challenge.</p>
+      <button onclick="nextScreen(9, 10)" class="spawn-btn">攀登最高峰 → Climb the highest peak</button>
+    </div>
+  </section>
+
+  <section id="screen-10" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/mountains.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo9.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">迷人风景 (Breathtaking View)</h2>
+      <p class="poetic-text">From the highest peaks to the deepest valleys, nothing in this world compares to the beauty of your soul.</p>
+      <button onclick="nextScreen(10, 11)" class="spawn-btn">触摸云端 → Touch the clouds</button>
+    </div>
+  </section>
+
+  <section id="screen-11" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/mountains.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo10.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">爱的回声 (Echoes of Love)</h2>
+      <p class="poetic-text">I want to shout my love for you so loud that the whole world hears it echoing back.</p>
+      <button onclick="nextScreen(11, 12)" class="spawn-btn">走进夜空 → Step into the night sky</button>
+    </div>
+  </section>
+
+  <section id="screen-12" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/nightsky.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo11.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">星空 (Constellations)</h2>
+      <p class="poetic-text">Out of all the stars in the sky, you shine the absolute brightest. You guide me through my darkest nights.</p>
+      <button onclick="nextScreen(12, 13)" class="spawn-btn">追随星光 → Follow the starlight</button>
+    </div>
+  </section>
+
+  <section id="screen-13" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/nightsky.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/photo12.jpg" alt="Jingxuan" class="floating-img">
+      <h2 class="glow-text">无尽星河 (Endless Galaxy)</h2>
+      <p class="poetic-text">The universe is infinite, but it still isn't big enough to hold how much I love you.</p>
+      <button onclick="nextScreen(13, 14)" class="spawn-btn">寻找宝藏 → Search for the treasure</button>
+    </div>
+  </section>
+
+  <section id="screen-14" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/chest.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/best-photo.jpg" alt="Treasure" class="floating-img">
+      <h2 class="glow-text">我最珍贵的宝物 (My Greatest Treasure)</h2>
+      <p class="poetic-text">Gold and diamonds mean nothing. Across all the servers, biomes, and worlds, finding you was the greatest discovery of my life.</p>
+      <button onclick="nextScreen(14, 15)" class="spawn-btn">走进我的心 → Step into my heart</button>
+    </div>
+  </section>
+
+  <section id="screen-15" class="screen hidden">
+    <video autoplay muted loop playsinline class="bg-video"><source src="assets/portal.mp4" type="video/mp4"></video>
+    <div class="content">
+      <img src="assets/us-together.jpg" alt="Us" class="floating-img" style="box-shadow: 0 0 30px #a200ff;">
+      <h1 class="glow-text" style="color: #ff99cc;">《我愿意》 (I Do)</h1>
+      <p class="poetic-text vow-text">
+        Hou Jingxuan, no matter the kilometers between us, no matter what obstacles we face, I promise to marry you.<br><br>
+        I will cross every ocean and climb every mountain until the day I stand before you, slip a ring on your finger, and call you my wife. You are my forever.<br><br>
+        Love, Mark.
+      </p>
+      <button class="spawn-btn final-btn">💍 通往未来 → Toward the future</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
